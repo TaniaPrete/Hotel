@@ -1,10 +1,11 @@
-/* Adatta le immagini del carousel */
-.carousel-inner img {
-    width: 100%; /* Adatta la larghezza all'area disponibile */
-    height: auto; /* Mantieni le proporzioni originali */
-    max-height: 500px; /* Limita l'altezza massima per evitare che occupi troppo spazio */
-    object-fit: contain; /* Mantiene l'intera immagine visibile senza ritagliarla */
-    margin: auto; /* Centra l'immagine */
+
+
+@media (max-width: 768px) {
+    .carousel-inner img {
+        max-height: 250px; /* Rendi le immagini più piccole */
+        object-fit: cover; /* Mantieni il focus visibile */
+    }
 }
+
 
 

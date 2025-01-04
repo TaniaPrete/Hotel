@@ -202,19 +202,30 @@ footer {
     }
 }
 
+
 .carousel-inner {
-    min-height: 300px; /* Altezza minima per il carousel */
-    max-height: 500px; /* Altezza massima per immagini grandi */
-    overflow: hidden; /* Evita che immagini troppo grandi sbordino */
+    min-height: 300px; /* Altezza minima del carousel */
+    max-height: 500px; /* Altezza massima del carousel */
+    overflow: hidden; /* Evita che immagini troppo grandi escano */
 }
 
 .carousel-item img {
-    max-height: 100%; /* Assicura che non superi il contenitore */
-    object-fit: contain; /* Mantieni il focus visibile senza tagli */
+    width: 100%; /* Adatta la larghezza al contenitore */
+    height: auto; /* Mantieni le proporzioni */
+    max-height: 500px; /* Limita l'altezza massima */
+    object-fit: contain; /* Evita di ritagliare l'immagine */
+    object-position: center; /* Centra l'immagine nel contenitore */
+    display: block;
+    margin: 0 auto; /* Centra orizzontalmente */
 }
 
 @media (max-width: 768px) {
     .carousel-inner img {
         max-height: 300px; /* Rendi le immagini più piccole su schermi mobili */
     }
+}
+
+.carousel-inner img {
+    object-fit: cover; /* Riempie il contenitore senza lasciare spazi vuoti */
+    object-position: center center; /* Mantiene il focus al centro */
 }
