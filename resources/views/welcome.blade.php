@@ -21,10 +21,10 @@
                 <img src="{{ asset('images/hotel1.jpg') }}" class="d-block w-100" alt="Foto 1">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('images/hotel2.jpg') }}" class="d-block w-100" alt="Foto 2">
+                <img src="{{ asset('images/hotel3.jpg') }}" class="d-block w-100" alt="Foto 2">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('images/hotel3.jpg') }}" class="d-block w-100" alt="Foto 3">
+                <img src="{{ asset('images/hotel4.webp') }}" class="d-block w-100" alt="Foto 3">
             </div>
             
         </div>

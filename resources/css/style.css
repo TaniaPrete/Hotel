@@ -1,11 +1,3 @@
 
 
-@media (max-width: 768px) {
-    .carousel-inner img {
-        max-height: 250px; /* Rendi le immagini più piccole */
-        object-fit: cover; /* Mantieni il focus visibile */
-    }
-}
-
-
 

@@ -13,7 +13,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="{{ asset('hero-image.jpg') }}" alt="Logo Hotel con Amore">
+                <img src="{{ asset('Hotel-PNG-Image.png') }}" alt="Logo Hotel con Amore">
             </div>
             <ul class="nav-links">
                 <li><a href="{{ route('welcome') }}">Home</a></li>
@@ -27,6 +27,12 @@
 
 
             </ul>
+            <!-- Menu hamburger -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
 
