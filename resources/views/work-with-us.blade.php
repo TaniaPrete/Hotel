@@ -13,7 +13,7 @@
         <li><strong>Personale di Pulizia:</strong> Mantieni il nostro hotel impeccabile e accogliente.</li>
     </ul>
     <h3>Come candidarsi</h3>
-    <p>Invia il tuo CV e una breve lettera di presentazione a <a href="mailto:jobs@hotel.com">jobs@hotel.com</a>.</p>
+    <p>Invia il tuo CV e una breve lettera di presentazione a <a href="mailto:hello@example.com">jobs@hotel.com</a>.</p>
 </section>
 @endsection
 

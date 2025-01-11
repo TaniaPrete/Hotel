@@ -17,5 +17,10 @@
         <h3>3. Colazione Inclusa</h3>
         <p>Gusta una deliziosa colazione inclusa nel tuo soggiorno.</p>
     </div>
+    <div class="service-item">
+        <h3>4. SPA di Lusso</h3>
+        <p>Rilassati nella nostra SPA e scopri i pacchetti benessere pensati per te.</p>
+        <a href="{{ route('spa') }}" class="cta-button">Scopri la SPA</a>
+    </div>
 </section>
 @endsection

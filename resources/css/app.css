@@ -1,8 +1,3 @@
-
-@import 'bootstrap';
-@import './style.css';
-@import './app.css';
-
 /* General Reset */
 * {
     margin: 0;
@@ -12,197 +7,274 @@
 
 /* Variabili CSS */
 :root {
-    --primary-color: #ff6600;
-    --secondary-color: #333;
-    --text-color: #f4f4f4;
-    --hover-color: #ff4500;
+    --primary-color: #FF6B2F; /* Arancione permanente */
+    --secondary-color: #2F4F4F;
+    --navbar-bg-color: #013A3A;
+    --text-color: #333;
+    --hover-color: #013A3A; /* Colore della navbar per hover */
+    --background-color: #FAF9F6;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Layout generali */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lora', serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
     line-height: 1.6;
-    background-color: var(--text-color);
 }
 
-/* Header */
+/* Navbar */
 header {
-    background-color: var(--secondary-color);
-    padding: 20px;
-    color: var(--primary-color);
+    background-color: var(--navbar-bg-color);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo img {
+    height: 50px;
 }
 
 header nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-header .logo img {
-    width: 150px;
-}
-
-/* Navbar: visibile di default sui desktop */
-header .nav-links {
+.nav-links {
     list-style: none;
-    display: flex; /* Mostra il menu di default */
-    flex-direction: row; /* Disposizione orizzontale sui desktop */
-    gap: 20px; /* Spaziatura tra i link */
-    background-color: transparent;
-    position: static;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-header .nav-links li {
-    margin: 0;
+.nav-links.active {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    background-color: var(--navbar-bg-color);
+    padding: 20px;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
 
-header .nav-links a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    transition: color 0.3s;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
-header .nav-links a:hover {
-    color: var(--hover-color);
+.nav-links a:hover {
+    color: var(--primary-color);
 }
 
-/* Menu Hamburger */
+/* Hamburger */
 .hamburger {
-    display: none; /* Nascondi sui desktop */
+    display: none;
     flex-direction: column;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .hamburger .line {
-    width: 25px;
-    height: 3px;
     background-color: white;
+    height: 3px;
+    width: 25px;
     margin: 3px 0;
-}
-
-/* Responsività: Mostra hamburger e nascondi il menu sui dispositivi mobili */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex; /* Mostra l'icona hamburger */
-    }
-
-    header .nav-links {
-        display: none; /* Nascondi il menu di default sui dispositivi mobili */
-        flex-direction: column; /* Organizza i link in verticale */
-        width: 100%;
-        padding: 10px 0;
-        text-align: center;
-        background-color: var(--secondary-color);
-        position: absolute;
-        top: 60px; /* Spostalo sotto il logo */
-        right: 0;
-        z-index: 1000;
-    }
-
-    header .nav-links.active {
-        display: flex; /* Mostra i link quando attivo */
-    }
 }
 
 /* Hero Section */
 #hero {
-    background-image: url('hero-image.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #f8f9fa;
+    padding: 50px 20px;
     text-align: center;
-    padding: 100px 20px;
-    color: var(--primary-color);
+    position: relative;
 }
 
 #hero h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
+    color: #013A3A;
+    margin-bottom: 20px;
 }
 
 #hero p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px; /* Aumenta la distanza dal bottone */
 }
 
-.cta-button {
+#hero .cta-button {
     background-color: var(--primary-color);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, background-color 0.3s;
+    margin-top: 20px;
+    position: relative;
 }
 
-.cta-button:hover {
-    transform: scale(1.1);
+#hero .cta-button:hover {
     background-color: var(--hover-color);
+    transform: scale(1.05);
 }
 
-/* Servizi Section */
-#services {
-    padding: 50px 20px;
+/* Carosello */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Limita la larghezza totale */
+    margin: 20px auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.carousel-item {
+    display: none; /* Nasconde tutte le immagini */
     text-align: center;
 }
 
-#services .services-container {
+.carousel-item.active {
+    display: block; /* Mostra solo l'immagine attiva */
+}
+
+.carousel-item img {
+    width: 50%; /* Rimpicciolisce ulteriormente le immagini */
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-#services .service {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    width: 90%;
-    max-width: 300px;
-    margin: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+.carousel-controls button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-#services .service:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.carousel-controls button:hover {
+    color: var(--primary-color);
 }
 
-#services .service h3 {
-    margin-bottom: 10px;
+.carousel-indicators {
+    display: none; /* Rimuove i puntini in alto */
 }
 
-#services .service p {
-    color: #555;
+/* Servizi */
+#services {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#services h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+#services h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+#services p {
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color);
-    color: white;
     text-align: center;
+    background-color: var(--navbar-bg-color);
+    color: white;
     padding: 20px;
+    margin-top: 20px;
 }
 
-/* Carousel */
-.carousel-inner {
-    min-height: 300px; /* Altezza minima del carousel */
-    max-height: 500px; /* Altezza massima del carousel */
-    overflow: hidden; /* Evita che immagini troppo grandi escano */
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
-.carousel-item img {
-    width: 100%; /* Adatta la larghezza al contenitore */
-    height: auto; /* Mantieni le proporzioni */
-    max-height: 500px; /* Limita l'altezza massima */
-    object-fit: contain; /* Evita di ritagliare l'immagine */
-    object-position: center; /* Centra l'immagine nel contenitore */
-    display: block;
-    margin: 0 auto; /* Centra orizzontalmente */
+footer a:hover {
+    color: var(--hover-color);
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
-    .carousel-inner img {
-        max-height: 300px; /* Immagini più piccole su dispositivi mobili */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .carousel-item img {
+        width: 70%;
+        height: auto;
+    }
+
+    #services h2 {
+        font-size: 1.8rem;
+    }
+
+    #services h3 {
+        font-size: 1.3rem;
+    }
+
+    #services p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
     }
 }

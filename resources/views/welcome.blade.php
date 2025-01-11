@@ -9,25 +9,27 @@
     <a href="#services" class="btn btn-primary mt-3 cta-button">Scopri di più</a>
 </section>
 
-<section id="slideshow" class="my-5">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<section id="slideshow" class="my-5 text-center">
+    <div id="carouselExampleIndicators" class="carousel slide w-75 mx-auto" data-bs-ride="carousel">
+        <!-- Indicatori -->
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
         </div>
+        <!-- Immagini -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('images/hotel1.jpg') }}" class="d-block w-100" alt="Foto 1">
+                <img src="{{ asset('images/2.webp') }}" class="d-block w-100" alt="Foto 1">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('images/hotel3.jpg') }}" class="d-block w-100" alt="Foto 2">
+                <img src="{{ asset('images/3.webp') }}" class="d-block w-100" alt="Foto 2">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('images/hotel4.webp') }}" class="d-block w-100" alt="Foto 3">
+                <img src="{{ asset('images/4.webp') }}" class="d-block w-100" alt="Foto 3">
             </div>
-            
         </div>
+        <!-- Controlli -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Precedente</span>
@@ -36,9 +38,6 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Successiva</span>
         </button>
-    </div>
-    <div class="text-center mt-3">
-        <a href="{{ route('gallery') }}" class="btn btn-secondary">Visita la Galleria</a>
     </div>
 </section>
 

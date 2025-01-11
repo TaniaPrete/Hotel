@@ -10,34 +10,34 @@
             <!-- Colonna 1 -->
             <div class="col-md-4">
                 <a href="{{ asset('images/photo1.jpg') }}" target="_blank">
-                    <img src="{{ asset('images/hotel1.jpg') }}" class="img-fluid rounded shadow" alt="Foto 1">
+                    <img src="{{ asset('images/8.webp') }}" class="img-fluid rounded shadow" alt="Foto 1">
                 </a>
             </div>
             <!-- Colonna 2 -->
             <div class="col-md-4">
                 <a href="{{ asset('images/photo2.jpg') }}" target="_blank">
-                    <img src="{{ asset('images/hotel2.jpg') }}" class="img-fluid rounded shadow" alt="Foto 2">
+                    <img src="{{ asset('images/2.webp') }}" class="img-fluid rounded shadow" alt="Foto 2">
                 </a>
             </div>
             <!-- Colonna 3 -->
             <div class="col-md-4">
                 <a href="{{ asset('images/photo3.jpg') }}" target="_blank">
-                    <img src="{{ asset('images/hotel3.jpg') }}" class="img-fluid rounded shadow" alt="Foto 3">
+                    <img src="{{ asset('images/3.webp') }}" class="img-fluid rounded shadow" alt="Foto 3">
                 </a>
             </div>
             <div class="col-md-4">
                 <a href="{{ asset('images/photo3.jpg') }}" target="_blank">
-                    <img src="{{ asset('images/hotel4.webp') }}" class="img-fluid rounded shadow" alt="Foto 3">
+                    <img src="{{ asset('images/4.webp') }}" class="img-fluid rounded shadow" alt="Foto 3">
                 </a>
             </div>
             <div class="col-md-4">
                 <a href="{{ asset('images/photo3.jpg') }}" target="_blank">
-                    <img src="{{ asset('images/hotel5.jpeg') }}" class="img-fluid rounded shadow" alt="Foto 3">
+                    <img src="{{ asset('images/5.webp') }}" class="img-fluid rounded shadow" alt="Foto 3">
                 </a>
             </div>
             <div class="col-md-4">
                 <a href="{{ asset('images/photo3.jpg') }}" target="_blank">
-                    <img src="{{ asset('images/hotel6.jpg') }}" class="img-fluid rounded shadow" alt="Foto 3">
+                    <img src="{{ asset('images/6.webp') }}" class="img-fluid rounded shadow" alt="Foto 3">
                 </a>
             </div>
             <!-- Aggiungi altre immagini qui -->
