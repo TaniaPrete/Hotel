@@ -11,13 +11,6 @@
 
 <section id="slideshow" class="my-5 text-center">
     <div id="carouselExampleIndicators" class="carousel slide w-75 mx-auto" data-bs-ride="carousel">
-        <!-- Indicatori -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-        </div>
-        <!-- Immagini -->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="{{ asset('images/2.webp') }}" class="d-block w-100" alt="Foto 1">
@@ -29,14 +22,11 @@
                 <img src="{{ asset('images/4.webp') }}" class="d-block w-100" alt="Foto 3">
             </div>
         </div>
-        <!-- Controlli -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Precedente</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Successiva</span>
         </button>
     </div>
 </section>
